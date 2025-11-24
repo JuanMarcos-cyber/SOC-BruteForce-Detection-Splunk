@@ -78,8 +78,4 @@ Miami, FL, USA
 │── /Queries
 │── /Docs
 
-### 🔄 Next Steps  
-- Upload screenshots in `/Evidence`
-- Add real log samples (sanitized)
-- Optional: Enrich data with geolocation lookup
 - 
