@@ -1,0 +1,66 @@
+INCIDENT RESPONSE REPORT
+========================
+
+Incident ID: INC-2024-BF-001
+Date/Time Detected: 2025-07-28 12:58 
+Analyst: Juan Marcos Lazaro
+Priority: Medium
+
+Incident Type: Brute Force Authentication Attack
+
+Indicators of Compromise (IOCs):
+- Source IP Address: 127.0.0.1
+- Target Services: SSH (Port 22), RDP (Port 3389)
+- Attack Pattern: Multiple rapid authentication failures followed by successful login
+- Targeted Accounts: admin, testuser, weakuser, operator, root
+- Time Frame: 2025-07-28 00:42:15 to 2025-07-28 00:48:39
+- Total Failed Attempts: 72 (SSH) + 70 (RDP approx.)
+- Successful Logins: 
+  - SSH: student:SIEMLab2023!
+  - RDP: multiple accounts including student, weakuser, operator
+
+Affected Hosts:
+- Primary Target: brute-force-lab-base-vm
+- Services Impacted: SSH daemon, RDP service
+- Compromised Accounts: student (SSH), weakuser and operator (RDP)
+
+Detection Method:
+- SIEM Platform: Splunk Enterprise
+- Detection Query: 
+  index=main sourcetype=linux_secure "Failed password"
+  | rex field=_raw "Failed password for (?<username>\S+) from (?<src_ip>\S+)"
+  | stats count as failed_attempts by username, src_ip, host
+  | where failed_attempts >= 3
+  | sort -failed_attempts
+- Alert Trigger: >3 failed login attempts within 5-minute window
+- Correlation Rule: Failed login attempts followed by successful authentication
+
+Analysis Summary:
+The incident represents a simulated brute force attack targeting both SSH and RDP protocols. The attacker attempted multiple username/password combinations using known weak credentials. Over the span of approximately 6 minutes, the system logged dozens of failed SSH and RDP authentication attempts. The SSH attack resulted in a successful login to the student account, while the RDP attack showed numerous successful logins, likely due to insecure configuration in the lab environment.
+
+Evidence Collected:
+- /var/log/auth.log entries
+- Splunk SIEM search results
+- Brute-force attack logs:
+  - attack_log.txt (SSH)
+  - rdp_attack_log.txt (RDP)
+- Python scripts used to simulate the attacks
+
+Recommended Containment Actions:
+1. Immediate: Block 127.0.0.1 (in real-world case: attacker IP) at the firewall
+2. Short-term: Enforce password reset for all affected users
+3. Medium-term: Configure account lockout policies after 3 failed attempts
+4. Long-term: Enforce multi-factor authentication for SSH and RDP access
+
+Escalation Path:
+- Level 1: Security Operations Center (SOC)
+- Level 2: Security Analyst
+- Level 3: Incident Response Team
+- Management: Security Manager
+
+Next Steps:
+1. Execute containment and mitigation actions listed above
+2. Continue monitoring SIEM for further brute-force attempts
+3. Audit and harden authentication settings and account privileges
+4. Conduct training for IT staff on brute-force prevention
+5. Refine SIEM rules for faster detection of brute-force patterns
