@@ -1,0 +1,305 @@
+student@lab-1753662556-7ex61u:~/BruteForceAttackLab$ python3 scripts/brute_force_ssh.py
+SSH Brute Force Attack Simulation
+=================================
+This script simulates a brute force attack for educational purposes.
+It will attempt to login to SSH with various username/password combinations.
+Focus is on VALID usernames to generate 'Failed password' log entries.
+
+[INFO] Starting brute force attack simulation against 127.0.0.1:22
+[INFO] Target usernames: ['student', 'admin', 'testuser', 'weakuser', 'operator', 'root']
+[INFO] Testing 18 passwords per user
+[INFO] Delay between attempts: 2 seconds
+------------------------------------------------------------
+
+[INFO] Testing username: student
+[ATTEMPT 1] Trying student:password
+[FAILED] Authentication failed for student:password
+[ATTEMPT 2] Trying student:123456
+[FAILED] Authentication failed for student:123456
+[ATTEMPT 3] Trying student:admin
+[FAILED] Authentication failed for student:admin
+[ATTEMPT 4] Trying student:test
+[FAILED] Authentication failed for student:test
+[ATTEMPT 5] Trying student:guest
+[FAILED] Authentication failed for student:guest
+[ATTEMPT 6] Trying student:login
+[FAILED] Authentication failed for student:login
+[ATTEMPT 7] Trying student:pass
+[FAILED] Authentication failed for student:pass
+[ATTEMPT 8] Trying student:password123
+[FAILED] Authentication failed for student:password123
+[ATTEMPT 9] Trying student:admin123
+[FAILED] Authentication failed for student:admin123
+[ATTEMPT 10] Trying student:letmein
+[FAILED] Authentication failed for student:letmein
+[ATTEMPT 11] Trying student:qwerty
+[FAILED] Authentication failed for student:qwerty
+[ATTEMPT 12] Trying student:welcome
+[FAILED] Authentication failed for student:welcome
+[ATTEMPT 13] Trying student:changeme
+[FAILED] Authentication failed for student:changeme
+[ATTEMPT 14] Trying student:SIEMLab2023!
+[SUCCESS] Login successful with student:SIEMLab2023!
+[ATTEMPT 15] Trying student:AdminPass123!
+[FAILED] Authentication failed for student:AdminPass123!
+[ATTEMPT 16] Trying student:TestPass456!
+[FAILED] Authentication failed for student:TestPass456!
+[ATTEMPT 17] Trying student:123456
+[FAILED] Authentication failed for student:123456
+[ATTEMPT 18] Trying student:OpPass789!
+[FAILED] Authentication failed for student:OpPass789!
+
+[INFO] Testing username: admin
+[ATTEMPT 19] Trying admin:password
+[FAILED] Authentication failed for admin:password
+[ATTEMPT 20] Trying admin:123456
+[FAILED] Authentication failed for admin:123456
+[ATTEMPT 21] Trying admin:admin
+[FAILED] Authentication failed for admin:admin
+[ATTEMPT 22] Trying admin:test
+[FAILED] Authentication failed for admin:test
+[ATTEMPT 23] Trying admin:guest
+[FAILED] Authentication failed for admin:guest
+[ATTEMPT 24] Trying admin:login
+[FAILED] Authentication failed for admin:login
+[ATTEMPT 25] Trying admin:pass
+[FAILED] Authentication failed for admin:pass
+[ATTEMPT 26] Trying admin:password123
+[FAILED] Authentication failed for admin:password123
+[ATTEMPT 27] Trying admin:admin123
+[FAILED] Authentication failed for admin:admin123
+[ATTEMPT 28] Trying admin:letmein
+[FAILED] Authentication failed for admin:letmein
+[ATTEMPT 29] Trying admin:qwerty
+[FAILED] Authentication failed for admin:qwerty
+[ATTEMPT 30] Trying admin:welcome
+[FAILED] Authentication failed for admin:welcome
+[ATTEMPT 31] Trying admin:changeme
+[FAILED] Authentication failed for admin:changeme
+[ATTEMPT 32] Trying admin:SIEMLab2023!
+[FAILED] Authentication failed for admin:SIEMLab2023!
+[ATTEMPT 33] Trying admin:AdminPass123!
+[SUCCESS] Login successful with admin:AdminPass123!
+[ATTEMPT 34] Trying admin:TestPass456!
+[FAILED] Authentication failed for admin:TestPass456!
+[ATTEMPT 35] Trying admin:123456
+[FAILED] Authentication failed for admin:123456
+[ATTEMPT 36] Trying admin:OpPass789!
+[FAILED] Authentication failed for admin:OpPass789!
+
+[INFO] Testing username: testuser
+[ATTEMPT 37] Trying testuser:password
+[FAILED] Authentication failed for testuser:password
+[ATTEMPT 38] Trying testuser:123456
+[FAILED] Authentication failed for testuser:123456
+[ATTEMPT 39] Trying testuser:admin
+[FAILED] Authentication failed for testuser:admin
+[ATTEMPT 40] Trying testuser:test
+[FAILED] Authentication failed for testuser:test
+[ATTEMPT 41] Trying testuser:guest
+[FAILED] Authentication failed for testuser:guest
+[ATTEMPT 42] Trying testuser:login
+[FAILED] Authentication failed for testuser:login
+[ATTEMPT 43] Trying testuser:pass
+[FAILED] Authentication failed for testuser:pass
+[ATTEMPT 44] Trying testuser:password123
+[FAILED] Authentication failed for testuser:password123
+[ATTEMPT 45] Trying testuser:admin123
+[FAILED] Authentication failed for testuser:admin123
+[ATTEMPT 46] Trying testuser:letmein
+[FAILED] Authentication failed for testuser:letmein
+[ATTEMPT 47] Trying testuser:qwerty
+[FAILED] Authentication failed for testuser:qwerty
+[ATTEMPT 48] Trying testuser:welcome
+[FAILED] Authentication failed for testuser:welcome
+[ATTEMPT 49] Trying testuser:changeme
+[FAILED] Authentication failed for testuser:changeme
+[ATTEMPT 50] Trying testuser:SIEMLab2023!
+[FAILED] Authentication failed for testuser:SIEMLab2023!
+[ATTEMPT 51] Trying testuser:AdminPass123!
+[FAILED] Authentication failed for testuser:AdminPass123!
+[ATTEMPT 52] Trying testuser:TestPass456!
+[SUCCESS] Login successful with testuser:TestPass456!
+[ATTEMPT 53] Trying testuser:123456
+[FAILED] Authentication failed for testuser:123456
+[ATTEMPT 54] Trying testuser:OpPass789!
+[FAILED] Authentication failed for testuser:OpPass789!
+
+[INFO] Testing username: weakuser
+[ATTEMPT 55] Trying weakuser:password
+[FAILED] Authentication failed for weakuser:password
+[ATTEMPT 56] Trying weakuser:123456
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2369, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/packet.py", line 395, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/packet.py", line 665, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2185, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2373, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[ERROR] SSH connection error: Error reading SSH protocol banner
+[ATTEMPT 57] Trying weakuser:admin
+[FAILED] Authentication failed for weakuser:admin
+[ATTEMPT 58] Trying weakuser:test
+[FAILED] Authentication failed for weakuser:test
+[ATTEMPT 59] Trying weakuser:guest
+[FAILED] Authentication failed for weakuser:guest
+[ATTEMPT 60] Trying weakuser:login
+[FAILED] Authentication failed for weakuser:login
+[ATTEMPT 61] Trying weakuser:pass
+[FAILED] Authentication failed for weakuser:pass
+[ATTEMPT 62] Trying weakuser:password123
+[FAILED] Authentication failed for weakuser:password123
+[ATTEMPT 63] Trying weakuser:admin123
+[FAILED] Authentication failed for weakuser:admin123
+[ATTEMPT 64] Trying weakuser:letmein
+[FAILED] Authentication failed for weakuser:letmein
+[ATTEMPT 65] Trying weakuser:qwerty
+[FAILED] Authentication failed for weakuser:qwerty
+[ATTEMPT 66] Trying weakuser:welcome
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2369, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/packet.py", line 395, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/packet.py", line 665, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2185, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2373, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[ERROR] SSH connection error: Error reading SSH protocol banner
+[ATTEMPT 67] Trying weakuser:changeme
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2369, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/packet.py", line 395, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/packet.py", line 665, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2185, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.9/dist-packages/paramiko/transport.py", line 2373, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[ERROR] SSH connection error: Error reading SSH protocol banner
+[ATTEMPT 68] Trying weakuser:SIEMLab2023!
+[FAILED] Authentication failed for weakuser:SIEMLab2023!
+[ATTEMPT 69] Trying weakuser:AdminPass123!
+[FAILED] Authentication failed for weakuser:AdminPass123!
+[ATTEMPT 70] Trying weakuser:TestPass456!
+[FAILED] Authentication failed for weakuser:TestPass456!
+[ATTEMPT 71] Trying weakuser:123456
+[SUCCESS] Login successful with weakuser:123456
+[ATTEMPT 72] Trying weakuser:OpPass789!
+[FAILED] Authentication failed for weakuser:OpPass789!
+
+[INFO] Testing username: operator
+[ATTEMPT 73] Trying operator:password
+[FAILED] Authentication failed for operator:password
+[ATTEMPT 74] Trying operator:123456
+[FAILED] Authentication failed for operator:123456
+[ATTEMPT 75] Trying operator:admin
+[FAILED] Authentication failed for operator:admin
+[ATTEMPT 76] Trying operator:test
+[FAILED] Authentication failed for operator:test
+[ATTEMPT 77] Trying operator:guest
+[FAILED] Authentication failed for operator:guest
+[ATTEMPT 78] Trying operator:login
+[FAILED] Authentication failed for operator:login
+[ATTEMPT 79] Trying operator:pass
+[FAILED] Authentication failed for operator:pass
+[ATTEMPT 80] Trying operator:password123
+[FAILED] Authentication failed for operator:password123
+[ATTEMPT 81] Trying operator:admin123
+[FAILED] Authentication failed for operator:admin123
+[ATTEMPT 82] Trying operator:letmein
+[FAILED] Authentication failed for operator:letmein
+[ATTEMPT 83] Trying operator:qwerty
+[FAILED] Authentication failed for operator:qwerty
+[ATTEMPT 84] Trying operator:welcome
+[FAILED] Authentication failed for operator:welcome
+[ATTEMPT 85] Trying operator:changeme
+[FAILED] Authentication failed for operator:changeme
+[ATTEMPT 86] Trying operator:SIEMLab2023!
+[FAILED] Authentication failed for operator:SIEMLab2023!
+[ATTEMPT 87] Trying operator:AdminPass123!
+[FAILED] Authentication failed for operator:AdminPass123!
+[ATTEMPT 88] Trying operator:TestPass456!
+[FAILED] Authentication failed for operator:TestPass456!
+[ATTEMPT 89] Trying operator:123456
+[FAILED] Authentication failed for operator:123456
+[ATTEMPT 90] Trying operator:OpPass789!
+[FAILED] Authentication failed for operator:OpPass789!
+
+[INFO] Testing username: root
+[ATTEMPT 91] Trying root:password
+[FAILED] Authentication failed for root:password
+[ATTEMPT 92] Trying root:123456
+[FAILED] Authentication failed for root:123456
+[ATTEMPT 93] Trying root:admin
+[FAILED] Authentication failed for root:admin
+[ATTEMPT 94] Trying root:test
+[FAILED] Authentication failed for root:test
+[ATTEMPT 95] Trying root:guest
+[FAILED] Authentication failed for root:guest
+[ATTEMPT 96] Trying root:login
+[FAILED] Authentication failed for root:login
+[ATTEMPT 97] Trying root:pass
+[FAILED] Authentication failed for root:pass
+[ATTEMPT 98] Trying root:password123
+[FAILED] Authentication failed for root:password123
+[ATTEMPT 99] Trying root:admin123
+[FAILED] Authentication failed for root:admin123
+[ATTEMPT 100] Trying root:letmein
+[FAILED] Authentication failed for root:letmein
+[ATTEMPT 101] Trying root:qwerty
+[FAILED] Authentication failed for root:qwerty
+[ATTEMPT 102] Trying root:welcome
+[FAILED] Authentication failed for root:welcome
+[ATTEMPT 103] Trying root:changeme
+[FAILED] Authentication failed for root:changeme
+[ATTEMPT 104] Trying root:SIEMLab2023!
+[FAILED] Authentication failed for root:SIEMLab2023!
+[ATTEMPT 105] Trying root:AdminPass123!
+[FAILED] Authentication failed for root:AdminPass123!
+[ATTEMPT 106] Trying root:TestPass456!
+[FAILED] Authentication failed for root:TestPass456!
+[ATTEMPT 107] Trying root:123456
+[FAILED] Authentication failed for root:123456
+[ATTEMPT 108] Trying root:OpPass789!
+[FAILED] Authentication failed for root:OpPass789!
+
+============================================================
+[SUMMARY] Attack simulation completed
+[SUMMARY] Total attempts: 108
+[SUMMARY] Successful login: weakuser:123456
+============================================================
+student@lab-1753662556-7ex61u:~/BruteForceAttackLab$ 
+

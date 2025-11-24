@@ -1,0 +1,199 @@
+student@lab-1753662556-7ex61u:~/BruteForceAttackLab$ python3 scripts/brute_force_rdp.py
+RDP Brute Force Attack Simulation
+=================================
+This script simulates a brute force attack against RDP for educational purposes.
+Focus is on VALID usernames to generate proper authentication failure logs.
+
+[INFO] Starting RDP brute force attack simulation against 127.0.0.1
+[INFO] Target usernames: ['student', 'admin', 'testuser', 'weakuser', 'operator']
+[INFO] Testing 17 passwords per user
+[INFO] Delay between attempts: 3 seconds
+------------------------------------------------------------
+
+[INFO] Testing username: student
+[ATTEMPT 1] Trying student:password
+[SUCCESS] RDP login successful with student:password
+[ATTEMPT 2] Trying student:123456
+[SUCCESS] RDP login successful with student:123456
+[ATTEMPT 3] Trying student:admin
+[SUCCESS] RDP login successful with student:admin
+[ATTEMPT 4] Trying student:test
+[SUCCESS] RDP login successful with student:test
+[ATTEMPT 5] Trying student:guest
+[SUCCESS] RDP login successful with student:guest
+[ATTEMPT 6] Trying student:login
+[SUCCESS] RDP login successful with student:login
+[ATTEMPT 7] Trying student:pass
+[SUCCESS] RDP login successful with student:pass
+[ATTEMPT 8] Trying student:password123
+[SUCCESS] RDP login successful with student:password123
+[ATTEMPT 9] Trying student:admin123
+[SUCCESS] RDP login successful with student:admin123
+[ATTEMPT 10] Trying student:letmein
+[SUCCESS] RDP login successful with student:letmein
+[ATTEMPT 11] Trying student:qwerty
+[SUCCESS] RDP login successful with student:qwerty
+[ATTEMPT 12] Trying student:welcome
+[SUCCESS] RDP login successful with student:welcome
+[ATTEMPT 13] Trying student:SIEMLab2023!
+[SUCCESS] RDP login successful with student:SIEMLab2023!
+[ATTEMPT 14] Trying student:AdminPass123!
+[SUCCESS] RDP login successful with student:AdminPass123!
+[ATTEMPT 15] Trying student:TestPass456!
+[SUCCESS] RDP login successful with student:TestPass456!
+[ATTEMPT 16] Trying student:123456
+[SUCCESS] RDP login successful with student:123456
+[ATTEMPT 17] Trying student:OpPass789!
+[SUCCESS] RDP login successful with student:OpPass789!
+
+[INFO] Testing username: admin
+[ATTEMPT 18] Trying admin:password
+[SUCCESS] RDP login successful with admin:password
+[ATTEMPT 19] Trying admin:123456
+[SUCCESS] RDP login successful with admin:123456
+[ATTEMPT 20] Trying admin:admin
+[SUCCESS] RDP login successful with admin:admin
+[ATTEMPT 21] Trying admin:test
+[SUCCESS] RDP login successful with admin:test
+[ATTEMPT 22] Trying admin:guest
+[SUCCESS] RDP login successful with admin:guest
+[ATTEMPT 23] Trying admin:login
+[SUCCESS] RDP login successful with admin:login
+[ATTEMPT 24] Trying admin:pass
+[SUCCESS] RDP login successful with admin:pass
+[ATTEMPT 25] Trying admin:password123
+[SUCCESS] RDP login successful with admin:password123
+[ATTEMPT 26] Trying admin:admin123
+[SUCCESS] RDP login successful with admin:admin123
+[ATTEMPT 27] Trying admin:letmein
+[SUCCESS] RDP login successful with admin:letmein
+[ATTEMPT 28] Trying admin:qwerty
+[SUCCESS] RDP login successful with admin:qwerty
+[ATTEMPT 29] Trying admin:welcome
+[SUCCESS] RDP login successful with admin:welcome
+[ATTEMPT 30] Trying admin:SIEMLab2023!
+[SUCCESS] RDP login successful with admin:SIEMLab2023!
+[ATTEMPT 31] Trying admin:AdminPass123!
+[SUCCESS] RDP login successful with admin:AdminPass123!
+[ATTEMPT 32] Trying admin:TestPass456!
+[SUCCESS] RDP login successful with admin:TestPass456!
+[ATTEMPT 33] Trying admin:123456
+[SUCCESS] RDP login successful with admin:123456
+[ATTEMPT 34] Trying admin:OpPass789!
+[SUCCESS] RDP login successful with admin:OpPass789!
+
+[INFO] Testing username: testuser
+[ATTEMPT 35] Trying testuser:password
+[SUCCESS] RDP login successful with testuser:password
+[ATTEMPT 36] Trying testuser:123456
+[SUCCESS] RDP login successful with testuser:123456
+[ATTEMPT 37] Trying testuser:admin
+[SUCCESS] RDP login successful with testuser:admin
+[ATTEMPT 38] Trying testuser:test
+[SUCCESS] RDP login successful with testuser:test
+[ATTEMPT 39] Trying testuser:guest
+[SUCCESS] RDP login successful with testuser:guest
+[ATTEMPT 40] Trying testuser:login
+[SUCCESS] RDP login successful with testuser:login
+[ATTEMPT 41] Trying testuser:pass
+[SUCCESS] RDP login successful with testuser:pass
+[ATTEMPT 42] Trying testuser:password123
+[SUCCESS] RDP login successful with testuser:password123
+[ATTEMPT 43] Trying testuser:admin123
+[SUCCESS] RDP login successful with testuser:admin123
+[ATTEMPT 44] Trying testuser:letmein
+[SUCCESS] RDP login successful with testuser:letmein
+[ATTEMPT 45] Trying testuser:qwerty
+[SUCCESS] RDP login successful with testuser:qwerty
+[ATTEMPT 46] Trying testuser:welcome
+[SUCCESS] RDP login successful with testuser:welcome
+[ATTEMPT 47] Trying testuser:SIEMLab2023!
+[SUCCESS] RDP login successful with testuser:SIEMLab2023!
+[ATTEMPT 48] Trying testuser:AdminPass123!
+[SUCCESS] RDP login successful with testuser:AdminPass123!
+[ATTEMPT 49] Trying testuser:TestPass456!
+[SUCCESS] RDP login successful with testuser:TestPass456!
+[ATTEMPT 50] Trying testuser:123456
+[SUCCESS] RDP login successful with testuser:123456
+[ATTEMPT 51] Trying testuser:OpPass789!
+[SUCCESS] RDP login successful with testuser:OpPass789!
+
+[INFO] Testing username: weakuser
+[ATTEMPT 52] Trying weakuser:password
+[SUCCESS] RDP login successful with weakuser:password
+[ATTEMPT 53] Trying weakuser:123456
+[SUCCESS] RDP login successful with weakuser:123456
+[ATTEMPT 54] Trying weakuser:admin
+[SUCCESS] RDP login successful with weakuser:admin
+[ATTEMPT 55] Trying weakuser:test
+[SUCCESS] RDP login successful with weakuser:test
+[ATTEMPT 56] Trying weakuser:guest
+[SUCCESS] RDP login successful with weakuser:guest
+[ATTEMPT 57] Trying weakuser:login
+[SUCCESS] RDP login successful with weakuser:login
+[ATTEMPT 58] Trying weakuser:pass
+[SUCCESS] RDP login successful with weakuser:pass
+[ATTEMPT 59] Trying weakuser:password123
+[SUCCESS] RDP login successful with weakuser:password123
+[ATTEMPT 60] Trying weakuser:admin123
+[SUCCESS] RDP login successful with weakuser:admin123
+[ATTEMPT 61] Trying weakuser:letmein
+[SUCCESS] RDP login successful with weakuser:letmein
+[ATTEMPT 62] Trying weakuser:qwerty
+[SUCCESS] RDP login successful with weakuser:qwerty
+[ATTEMPT 63] Trying weakuser:welcome
+[SUCCESS] RDP login successful with weakuser:welcome
+[ATTEMPT 64] Trying weakuser:SIEMLab2023!
+[SUCCESS] RDP login successful with weakuser:SIEMLab2023!
+[ATTEMPT 65] Trying weakuser:AdminPass123!
+[SUCCESS] RDP login successful with weakuser:AdminPass123!
+[ATTEMPT 66] Trying weakuser:TestPass456!
+[SUCCESS] RDP login successful with weakuser:TestPass456!
+[ATTEMPT 67] Trying weakuser:123456
+[SUCCESS] RDP login successful with weakuser:123456
+[ATTEMPT 68] Trying weakuser:OpPass789!
+[SUCCESS] RDP login successful with weakuser:OpPass789!
+
+[INFO] Testing username: operator
+[ATTEMPT 69] Trying operator:password
+[SUCCESS] RDP login successful with operator:password
+[ATTEMPT 70] Trying operator:123456
+[SUCCESS] RDP login successful with operator:123456
+[ATTEMPT 71] Trying operator:admin
+[SUCCESS] RDP login successful with operator:admin
+[ATTEMPT 72] Trying operator:test
+[SUCCESS] RDP login successful with operator:test
+[ATTEMPT 73] Trying operator:guest
+[SUCCESS] RDP login successful with operator:guest
+[ATTEMPT 74] Trying operator:login
+[SUCCESS] RDP login successful with operator:login
+[ATTEMPT 75] Trying operator:pass
+[SUCCESS] RDP login successful with operator:pass
+[ATTEMPT 76] Trying operator:password123
+[SUCCESS] RDP login successful with operator:password123
+[ATTEMPT 77] Trying operator:admin123
+[SUCCESS] RDP login successful with operator:admin123
+[ATTEMPT 78] Trying operator:letmein
+[SUCCESS] RDP login successful with operator:letmein
+[ATTEMPT 79] Trying operator:qwerty
+[SUCCESS] RDP login successful with operator:qwerty
+[ATTEMPT 80] Trying operator:welcome
+[SUCCESS] RDP login successful with operator:welcome
+[ATTEMPT 81] Trying operator:SIEMLab2023!
+[SUCCESS] RDP login successful with operator:SIEMLab2023!
+[ATTEMPT 82] Trying operator:AdminPass123!
+[SUCCESS] RDP login successful with operator:AdminPass123!
+[ATTEMPT 83] Trying operator:TestPass456!
+[SUCCESS] RDP login successful with operator:TestPass456!
+[ATTEMPT 84] Trying operator:123456
+[SUCCESS] RDP login successful with operator:123456
+[ATTEMPT 85] Trying operator:OpPass789!
+[SUCCESS] RDP login successful with operator:OpPass789!
+
+============================================================
+[SUMMARY] RDP attack simulation completed
+[SUMMARY] Total attempts: 85
+[SUMMARY] Successful login: operator:OpPass789!
+============================================================
+student@lab-1753662556-7ex61u:~/BruteForceAttackLab$ 
+
