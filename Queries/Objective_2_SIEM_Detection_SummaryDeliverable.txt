@@ -1,0 +1,19 @@
+Objective 2 – Detect the Incident Using the SIEM
+------------------------------------------------
+
+Primary Detection Query (SIEM):
+--------------------------------
+index=main sourcetype=linux_secure "Failed password"
+| rex field=_raw "Failed password for (?<username>\S+) from (?<src_ip>\S+)"
+| stats count as failed_attempts by username, src_ip, host
+| where failed_attempts >= 3
+| sort -failed_attempts
+
+Summary of Detected Artifacts:
+-------------------------------
+Source IP: 127.0.0.1 (localhost)
+Target Usernames: student, admin, testuser, weakuser, operator, root
+First Failed Login: 2025-07-28 00:32:22
+First Successful Login: 2025-07-28 00:36:55
+Total Failed Attempts: 74
+Attack Duration: 4 minutes and 33 seconds

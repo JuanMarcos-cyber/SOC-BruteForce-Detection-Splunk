@@ -1,0 +1,17 @@
+# SPLUNK ALERT CONFIGURATION
+=========================
+
+**Alert Name:** Brute Force Detection
+**Detection Logic:** 3+ failed SSH authentication attempts from single IP within 5-minute window
+**Schedule:** Runs every 5 minutes, analyzing last 10 minutes of data
+**Trigger Condition:** Results > 0
+**Actions:** Add to triggered alerts, optional email notification
+
+**Test Results:**
+- Attack executed at: 2025-07-28 13:46:08 UTC
+- Alert triggered at: 2025-07-28 13:50:21 UTC
+- Detection delay: 0:04:13
+- Alert accuracy: Successful detection
+
+**Operational Value:**
+This alert provides automated detection of brute force attacks with minimal false positives. The 5-minute detection window balances timely response with system performance. It allows SOC analysts to proactively respond to authentication-based threats, ensuring high visibility and faster containment of attacks.
