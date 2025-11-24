@@ -1,0 +1,39 @@
+# 1) Basic search for SSH authentication events
+index=main sourcetype=linux_secure ssh* 
+| head 50
+
+# 2) Failed SSH attempts
+index=main sourcetype=linux_secure "Failed password"
+| head 50
+
+# 3) Detect brute-force patterns (failed attempts)
+index=main sourcetype=linux_secure "Failed password"
+| rex field=_raw "Failed password for (?<username>\S+) from (?<src_ip>\S+)"
+| stats count as failed_attempts by username, src_ip, host
+| where failed_attempts >= 3
+| sort -failed_attempts
+
+# 4) Correlate failed + successful logins
+index=main sourcetype=linux_secure (("Failed password" OR "Accepted password") AND ssh*)
+| rex field=_raw "(?<auth_result>Failed|Accepted) password for (?<username>\S+) from (?<src_ip>\S+)"
+| eval auth_status=if(match(_raw, "Failed"), "Failed", "Success")
+| table _time, auth_status, username, src_ip
+| sort _time
+
+# 5) First failed login
+index=main sourcetype=linux_secure "Failed password"
+| rex field=_raw "Failed password for (?<username>\S+) from (?<src_ip>\S+)"
+| head 1
+| table _time, username, src_ip
+
+# 6) First successful login after failures
+index=main sourcetype=linux_secure "Accepted password"
+| rex field=_raw "Accepted password for (?<username>\S+) from (?<src_ip>\S+)"
+| head 1
+| table _time, username, src_ip
+
+# 7) Total attempts by IP and username
+index=main sourcetype=linux_secure ("Failed password" OR "Accepted password")
+| rex field=_raw "(?<auth_result>Failed|Accepted) password for (?<username>\S+) from (?<src_ip>\S+)"
+| stats count by src_ip, username
+| sort -count
