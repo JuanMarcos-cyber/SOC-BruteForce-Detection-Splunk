@@ -73,11 +73,6 @@ index=main sourcetype=linux_secure (("Failed password" OR "Accepted password") A
 | CIS Controls | 4.5, 16.3                    |
 
 
-## Author
-Juan Marcos Lázaro Rey
-Cybersecurity Professional — SOC & GRC
-Miami, FL, USA
-
 📂 Repository Structure
 
 /SOC-BruteForce-Detection-Splunk
