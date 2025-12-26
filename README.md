@@ -79,9 +79,9 @@ index=main sourcetype=linux_secure (("Failed password" OR "Accepted password") A
 ```text
 /SOC-BruteForce-Detection-Splunk
 │── README.md
+│── /Docs
 │── /Evidence
 │── /Queries
-│── /Docs
 ```
 
 # 🙌 Author
