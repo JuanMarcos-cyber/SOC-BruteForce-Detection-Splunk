@@ -86,3 +86,9 @@ Miami, FL, USA
 │── /Queries
 │── /Docs
 
+# 🙌 Author
+
+**Juan Marcos Lázaro**  
+Cloud Security & GRC Professional  
+Miami, FL  
+LinkedIn: https://www.linkedin.com/in/juanmarcoslazaro
