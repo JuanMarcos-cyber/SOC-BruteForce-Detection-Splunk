@@ -30,6 +30,7 @@ index=main sourcetype=linux_secure "Failed password"
 | stats count as failed_attempts by username, src_ip, host
 | where failed_attempts >= 3
 | sort -failed_attempts
+```
 
 🔄 Correlation with Successful Logins
 
@@ -75,11 +76,13 @@ index=main sourcetype=linux_secure (("Failed password" OR "Accepted password") A
 
 📂 Repository Structure
 
+```text
 /SOC-BruteForce-Detection-Splunk
 │── README.md
 │── /Evidence
 │── /Queries
 │── /Docs
+```
 
 # 🙌 Author
 
